@@ -21,7 +21,7 @@ public class MarkdownParse {
 
             
 
-            if(markdown.charAt(closeParen + 1) == ')'){
+            if(closeParen < markdown.length()-1 && markdown.charAt(closeParen + 1) == ')'){
                 closeParen = closeParen + 1;
             }
             if(closeParen == -1){
