@@ -14,7 +14,7 @@ public class MarkdownParseTest {
 
     @Test
     public void originalFile() throws IOException {
-        Path fileName = Path.of("test-file.md");
+        Path fileName = Path.of("./test-file.md");
 	    String contents = Files.readString(fileName);
         ArrayList<String> links = MarkdownParse.getLinks(contents);
 
@@ -23,7 +23,7 @@ public class MarkdownParseTest {
 
     @Test
     public void inccorectFile() throws IOException {
-        Path fileName = Path.of("incorrect.md");
+        Path fileName = Path.of("./incorrect.md");
 	    String contents = Files.readString(fileName);
         ArrayList<String> links = MarkdownParse.getLinks(contents);
 
@@ -32,7 +32,7 @@ public class MarkdownParseTest {
 
     @Test
     public void imageFile() throws IOException {
-        Path fileName = Path.of("image.md");
+        Path fileName = Path.of("./image.md");
 	    String contents = Files.readString(fileName);
         ArrayList<String> links = MarkdownParse.getLinks(contents);
 
@@ -40,7 +40,7 @@ public class MarkdownParseTest {
     }
     @Test
     public void newFile() throws IOException {
-        Path fileName = Path.of("newfile.md");
+        Path fileName = Path.of("./newfile.md");
 	    String contents = Files.readString(fileName);
         ArrayList<String> links = MarkdownParse.getLinks(contents);
 
